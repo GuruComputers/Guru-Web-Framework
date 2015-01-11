@@ -7,9 +7,6 @@
 		margin-top: -170px;
 		text-align: right;
 		padding: 60px 0 0 0;
-		@include respond-to(large-screen) {
-			background-color: $blue;
-		}
 	}
 
 	nav ul {
