@@ -29,7 +29,7 @@
 	<h4>Heading 4</h4>
 	<h5>Heading 5</h5>
 	<h6>Heading 6</h6>
-	<img src="img/logo.png" alt="logo">
+	<img src="img/logo.png" alt="logo" class="item-pic">
 	<footer>
 		<h1>I'm a footer</h1>
 	</footer>
