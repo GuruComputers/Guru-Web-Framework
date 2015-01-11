@@ -37,6 +37,9 @@ a {
     &:hover {
         color: lighten($blue, 20%);
     }
+    &:visited {
+        color:$blue;
+    }
 }
 
 .hidden {display: none;}
