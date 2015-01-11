@@ -5,18 +5,60 @@ $mobile-landscape: 481px;
 $laptop: 1025px;
 $large-screen: 1281px;
 
- @media screen and (max-width: $mobile-portrait) {
- 	$pageWidth: $mobile-portrait;
- }
+/* Media Query Mixins */
 
-  @media screen and (max-width: $mobile-landscape) {
- 	$pageWidth: $mobile-landscape;
- }
+/******************************************************************************** 
+** Name:- mobilePortrait
+** Description:- Set media query rules for Mobiles in Portrait
+** Coded by:- Dave Wakely
+** Last Updated:- 11/01/2015
+*********************************************************************************
+** Usage:- @include mobilePortrait {// Do something special}
+********************************************************************************/
+@mixin mobilePortrait{
+	@media screen and (max-width: $mobile-portrait) {
+		@content
+ 	}
+}
 
-  @media screen and (max-width: $laptop) {
- 	$pageWidth: $laptop;
- }
+/******************************************************************************** 
+** Name:- mobileLandscape
+** Description:- Set media query rules for Mobiles in Landscape
+** Coded by:- Dave Wakely
+** Last Updated:- 11/01/2015
+*********************************************************************************
+** Usage:- @include mobileLandscape {// Do something special}
+********************************************************************************/
+@mixin mobileLandscape{
+	@media screen and (max-width: $mobile-Landscape) {
+		@content
+ 	}
+}
 
-  @media screen and (max-width: $large-screen) {
- 	$pageWidth: $large-screen;
- }
+/******************************************************************************** 
+** Name:- laptop
+** Description:- Set media query rules for Laptops
+** Coded by:- Dave Wakely
+** Last Updated:- 11/01/2015
+*********************************************************************************
+** Usage:- @include laptop {// Do something special}
+********************************************************************************/
+@mixin mobileLandscape{
+	@media screen and (max-width: $laptop) {
+		@content
+ 	}
+}
+
+/******************************************************************************** 
+** Name:- largeScreen
+** Description:- Set media query rules for Large Screen Devices
+** Coded by:- Dave Wakely
+** Last Updated:- 11/01/2015
+*********************************************************************************
+** Usage:- @include largeScreen {// Do something special}
+********************************************************************************/
+@mixin largeScreen{
+	@media screen and (max-width: $large-screen) {
+		@content
+ 	}
+}
