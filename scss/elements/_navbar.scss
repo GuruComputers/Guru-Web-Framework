@@ -58,3 +58,19 @@
     nav a.selected {
     	color: red;
     }
+
+    .logo {
+    	display: inline-block;
+    	margin: 0 $marginWidth 0 0;
+    	padding: 0;
+
+    	@include respond(mobile-portrait) {
+    		float: left;
+    		display: inline;
+    		img {
+    			width: auto;
+    			height: auto;
+    			max-width: 100%;
+    		}
+    	}
+    }
