@@ -1,0 +1,53 @@
+// Define global defaults for Guru Web Framework
+@import "variables", "mixins";
+ 
+//----- CSS RESETS
+* {
+    margin:0;
+    padding:0;
+    -moz-box-sizing: border-box; /* Firefox, other Gecko */
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    box-sizing: border-box; /* Opera/IE 8+ */
+}
+
+img {
+    border:0 none;
+}
+
+html {
+    width:100%;
+    height:100%;
+    min-height:100%;
+}
+
+body {
+    width: 100%;
+    color: $black;
+    position:relative;
+    text-align: left;
+    font-size: 1em;
+    line-height:1.4em;
+    font-family: $font-family;
+    background: $white;
+}
+
+a {
+    color:$blue;
+    text-decoration: none;
+    &:hover {
+        color: lighten($blue, 20%);
+    }
+}
+
+.hidden {display: none;}
+  
+//----- GLOBAL FONTS
+  
+h1 {font-size: 2.4em;}
+h2 {font-size: 1.4em;}
+h3 {font-size: 1.2em;}
+h4 {font-size: 1em;}
+h5 {font-size: .8em;}
+h6 {font-size: .6em;}
+label {font-size: .8em;}
+p {font-size: 1em;}
