@@ -1,6 +1,9 @@
 // Define global defaults for Guru Web Framework
 @import "includes/variables", "includes/mixins", "includes/fonts";
  
+$test = true;
+$text-color = $blue;
+
 //----- CSS RESETS
 * {
     margin:0;
@@ -60,6 +63,9 @@ p {font-size: 1em;}
     height: auto;
 }
 
-.test {
-    color: $red;
+@if variable-exists(test) {
+    $text-color: $red;
 }
+ .test {
+    color: $text-color;
+ }
