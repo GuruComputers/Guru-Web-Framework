@@ -63,7 +63,3 @@ p {font-size: 1em;}
 %test {
     color: $red;
 }
-
-.testing {
-    @extend %test;
-}
