@@ -17,7 +17,7 @@
 </head>
 <body>
 	<header>
-		<img src="img/logo.png" alt="logo">
+		<img src="img/logo.png" alt="logo" class="logo">
 		<h1>Header</h1>
 		<nav>
 			<ul>
