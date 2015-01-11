@@ -14,6 +14,19 @@
 			position: fixed;
 			z-index: 9999;
 		}
+
+		&.pinned {
+			position: absolute;
+		}
+
+		@include respond-to(mobile-portrait) {
+			top: 10%
+			right: 4%;
+			width: 300px;
+			position: absolute;
+			text-align: center;
+			display: inline-block;
+		}
 	}
 
 	nav ul {
