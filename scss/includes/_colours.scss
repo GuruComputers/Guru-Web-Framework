@@ -5,3 +5,5 @@ $blue: #0000ff;
 $gray: #888888;
 $white: #ffffff;
 $black: #000000;
+$linkColour: $blue;
+$linkHoverColour: lighten($blue, 20%);
