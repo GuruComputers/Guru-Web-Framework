@@ -1,8 +1,8 @@
 <?php
 	$menu = array("About", "Server Status", "Free Hosting", "Premium Hosting", "Design Services", "Contact");
-	echo "<ul>"."\n";
+	echo '<ul class="menu_fr">'."\n";
 	foreach ($menu as $item) {
-		echo '<li class="menu_fr">'.$item.'</li>';
+		echo '<li>'.$item.'</li>'."\n";
 	}
-	echo "</ul>";
+	echo "</ul>"."\n";
 ?>
