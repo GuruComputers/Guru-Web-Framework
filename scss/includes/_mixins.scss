@@ -3,6 +3,8 @@
 ** Description:- Set a REM Font Size with Pixel Fallback for old Browsers
 ** Coded by:- Dave Wakely
 ** Last Updated:- 11/01/2015
+*********************************************************************************
+** Usage:- @include font-size(14px)
 ********************************************************************************/
 
 @function calculateRem($size) {
