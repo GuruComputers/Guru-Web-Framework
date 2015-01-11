@@ -43,7 +43,7 @@ $large-screen: 1281px;
 *********************************************************************************
 ** Usage:- @include laptop {// Do something special}
 ********************************************************************************/
-@mixin mobileLandscape{
+@mixin laptop{
 	@media screen and (max-width: $laptop) {
 		@content
  	}
