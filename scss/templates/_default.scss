@@ -63,3 +63,9 @@ p {font-size: 1em;}
 .test {
     color: $red;
 }
+
+.item-pic {
+    @include respond-to(mobile-portrait){
+        display: none;
+    }
+}
