@@ -1,11 +1,15 @@
-/* Authored Dependencies */
+// Authored Dependencies
 @import "includes/reset";
 @import "includes/variables";
 @import "includes/colours";
 @import "includes/fonts";
 @import "includes/mixins";
 
-/* Styling Dependencies */
+// Styling Dependencies
+@import "io/fb_slider"
+@import "io/media"
+@import "io/search_form"
+@import "io/twitter_feed"
 
-/* Templates */
+// Templates
 @import "templates/default";
