@@ -51,9 +51,25 @@
 // Usage:- @include animation($str)
 //-----------------------------------------------------------------------
 @mixin animation($str) {
-	-webkit-animation: #($str);
-	-moz-animation: #($str);
-	-ms-animation: #($str);
-	-o-animation: #($str);
-	-animation: #($str);
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+}
+
+//-----------------------------------------------------------------------
+// Name:- transition
+// Description:- Auto create vendor prefix lines for transition
+//-----------------------------------------------------------------------
+// Coded by:- Dave Wakely
+// Last Updated:- 11/01/2015
+// Usage:- @include transition($args...)
+//-----------------------------------------------------------------------
+@mixin transition($args...) {
+	-webkit-transition: $args;
+	-moz-transition: $args;
+	-ms-transition: $args;
+	-o-transition: $args;
+	transition: $args;
 }
