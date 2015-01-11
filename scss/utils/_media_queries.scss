@@ -5,60 +5,27 @@ $mobile-landscape: 481px;
 $laptop: 1025px;
 $large-screen: 1281px;
 
-/* Media Query Mixins */
+// Media Query Mixin
 
-//******************************************************************************* 
-// Name:- mobilePortrait
-// Description:- Set media query rules for Mobiles in Portrait
-// Coded by:- Dave Wakely
-// Last Updated:- 11/01/2015
-//*******************************************************************************
-// Usage:- @include mobilePortrait {// Do something special}
-//******************************************************************************/
-@mixin mobilePortrait{
-	@media screen and (max-width: $mobile-portrait) {
-		@content
- 	}
-}
-
-//******************************************************************************* 
-// Name:- mobileLandscape
-// Description:- Set media query rules for Mobiles in Landscape
-// Coded by:- Dave Wakely
-// Last Updated:- 11/01/2015
-//*******************************************************************************
-// Usage:- @include mobileLandscape {// Do something special}
-//******************************************************************************/
-@mixin mobileLandscape{
-	@media screen and (max-width: $mobile-landscape) {
-		@content
- 	}
-}
-
-//******************************************************************************* 
-// Name:- laptop
-// Description:- Set media query rules for Laptops
-// Coded by:- Dave Wakely
-// Last Updated:- 11/01/2015
-//*******************************************************************************
-// Usage:- @include laptop {// Do something special}
-//******************************************************************************/
-@mixin laptop{
-	@media screen and (max-width: $laptop) {
-		@content
- 	}
-}
-
-//******************************************************************************* 
-// Name:- largeScreen
-// Description:- Set media query rules for Large Screen Devices
-// Coded by:- Dave Wakely
-// Last Updated:- 11/01/2015
-//*******************************************************************************
-// Usage:- @include largeScreen {// Do something special}
-//******************************************************************************/
-@mixin largeScreen{
-	@media screen and (max-width: $large-screen) {
-		@content
- 	}
+@mixin respond-to($media) {
+	@if $media == mobile-portrait {
+		@media only screen and (max-width: $mobile-portrait){
+			@content;
+		}
+	}
+	@else if $media == mobile-landscape {
+		@media only screem amd (max-width: $mobile-landscape){
+			@content;
+		}
+	}
+	@else if $media == laptop {
+		@media only screen and (max-width: $laptop){
+			@content;
+		}
+	}
+	@else if $media == large-screen {
+		@media only screen and (max-width: $large-screen){
+			@content;
+		}
+	}
 }
