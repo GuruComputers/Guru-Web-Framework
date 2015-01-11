@@ -1,0 +1,41 @@
+// Define grid for Guru Web Framework
+.grid {
+    overflow: hidden;
+    width:$pageWidth;
+    margin:$hCenter;
+}
+
+%gridBase {
+    float:left;
+    margin: 0 $marginWidth;
+}
+ 
+// grid making magic
+@for $i from 1 through $gridColumns {
+    .g#{$i} {
+        @extend %gridBase;
+        width: ((100%/$gridColumns)*$i)-$marginWidth*2;
+    }
+}
+ 
+ 
+//----- BREAKPOINTS
+@media only screen and (max-width: $pageWidth)
+{
+    .grid {
+        width:100%;
+        margin: $hCenter;
+    }
+}
+ 
+ 
+@media only screen and (min-width: 0px) and (max-width: 480px)
+{
+    .grid {width:100%;}
+    @for $i from 1 through $gridColumns {
+        .g#{$i} {
+            width: 100%;
+            margin: $hCenter;
+        }
+    }
+}
