@@ -8,8 +8,8 @@
 	<title>
 		Guru Web Framework - Demo Page
 	</title>
-	<link href="../css/framework.css" rel="stylesheet" media="screen">
-	<link media="all" type="text/css" rel="stylesheet" href="../css/main.css">
+	<link href="css/framework.css" rel="stylesheet" media="screen">
+	<link media="all" type="text/css" rel="stylesheet" href="css/main.css">
 	<!--[if lt IE 9]>
 		<script src="bootstrap/assets/js/html5shiv.js"></script>
 		<script src="bootstrap/assets/js/respond.min.js"></script>
