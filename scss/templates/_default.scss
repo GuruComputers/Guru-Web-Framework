@@ -25,7 +25,7 @@ body {
     color: $black;
     position:relative;
     text-align: left;
-    @include font-size(14px)
+    @include font-size(14px);
     line-height:1.4em;
     font-family: $font-family;
     background: $white;
