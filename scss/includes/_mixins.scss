@@ -1,12 +1,11 @@
-/******************************************************************************** 
-** Name:- calulateRem
-** Description:- Set a REM Font Size with Pixel Fallback for old Browsers
-** Coded by:- Dave Wakely
-** Last Updated:- 11/01/2015
-*********************************************************************************
-** Usage:- @include font-size(14px)
-********************************************************************************/
-
+//-----------------------------------------------------------------------
+// Name:- calulateRem
+// Description:- Set a REM Font Size with Pixel Fallback for old Browsers
+//-----------------------------------------------------------------------
+// Coded by:- Dave Wakely
+// Last Updated:- 11/01/2015
+// Usage:- @include font-size(14px)
+//-----------------------------------------------------------------------
 @function calculateRem($size) {
 	$remSize: $size / 16px;
 	@return $remSize * 1rem;
@@ -15,4 +14,46 @@
 @mixin font-size($size) {
 	font-size: $size;
 	font-size: calculateRem($size);
+}
+
+//-----------------------------------------------------------------------
+// Name:- keyframes
+// Description:- Auto create vendor prefix lines for animation keyframes
+//-----------------------------------------------------------------------
+// Coded by:- Dave Wakely
+// Last Updated:- 11/01/2015
+// Usage:- @include keyframes($animation-name)
+//-----------------------------------------------------------------------
+@mixin keyframes($animation-name) {
+	@-webkit-keyframes $animation-name {
+		@content
+	}
+	@-moz-keyframes $animation-name {
+		@content
+	}
+	@-ms-keyframes $animation-name {
+		@content
+	}
+	@-o-keyframes $animation-name {
+		@content
+	}
+	@keyframes $animation-name {
+		@content
+	}
+}
+
+//-----------------------------------------------------------------------
+// Name:- animation
+// Description:- Auto create vendor prefix lines for animation
+//-----------------------------------------------------------------------
+// Coded by:- Dave Wakely
+// Last Updated:- 11/01/2015
+// Usage:- @include animation($str)
+//-----------------------------------------------------------------------
+@mixin animation($str) {
+	-webkit-animation: #($str);
+	-moz-animation: #($str);
+	-ms-animation: #($str);
+	-o-animation: #($str);
+	-animation: #($str);
 }
