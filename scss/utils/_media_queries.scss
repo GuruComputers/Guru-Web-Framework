@@ -14,7 +14,7 @@ $large-screen: 1281px;
 		}
 	}
 	@else if $media == mobile-landscape {
-		@media only screem amd (max-width: $mobile-landscape){
+		@media only screen and (max-width: $mobile-landscape){
 			@content;
 		}
 	}
@@ -24,7 +24,7 @@ $large-screen: 1281px;
 		}
 	}
 	@else if $media == large-screen {
-		@media only screen and (max-width: $large-screen){
+		@media only screen and (min-width: $large-screen){
 			@content;
 		}
 	}
