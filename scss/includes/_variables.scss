@@ -2,8 +2,8 @@
 $pageWidth: 1000px; //max width of page
 $gridColumns: 20; // number of columns for our grid
 $marginWidth: 0.5%; // margin width of gutters between columns. Change as needed.Make sure to use percentages
-$h_center: 0 auto;
-$v_center: auto 0;
-$centralize: auto auto;
-$linkColor: $blue;
-$linkHover: lighten($blue, 20%);
+$hCenter: 0 auto;
+$vCenter: auto 0;
+$hvCenter: auto auto;
+$linkColour: $blue;
+$linkHoverColour: lighten($blue, 20%);
