@@ -19,7 +19,7 @@
 	<header>
 		<img src="img/logo.png" class="logo" alt="logo">
 		<h1>Header</h1>
-		<nav class="menu_fl">
+		<nav>
 			<?php include "inc/menu.php"; ?>
 		</nav>
 	</header>
