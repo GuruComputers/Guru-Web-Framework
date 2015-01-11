@@ -3,7 +3,6 @@
 //-------------------
 
 // Mobile / Tablets First
-@include laptop{
 	nav {
 		margin-top: -170px;
 		text-align: right;
@@ -39,4 +38,3 @@
     nav a.selected {
     	color: red;
     }
-}
