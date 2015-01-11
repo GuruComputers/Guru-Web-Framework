@@ -20,11 +20,7 @@
 		<img src="img/logo.png" class="logo" alt="logo">
 		<h1>Header</h1>
 		<nav>
-			<ul>
-				<li>Item 1</li>
-				<li>Item 2</li>
-				<li>Item 3</li>
-			</ul>
+			<?php include "inc/menu.php"; ?>
 		</nav>
 	</header>
 	<h1>Heading 1</h1>
