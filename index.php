@@ -18,7 +18,6 @@
 <body>
 	<header>
 		<img src="img/logo.png" class="logo" alt="logo">
-		<h1>Header</h1>
 		<nav>
 			<?php include "inc/menu.php"; ?>
 		</nav>
