@@ -2,38 +2,88 @@
 // Responsive Navbar
 //-------------------
 
-nav {
-	margin-top: -170px;
-	text-align: right;
-	padding: 60px 0 0 0;
+// Mobile / Tablets First
+@include mobileLandscape{
+
+	body {
+		padding-top: 0;
+	}
+
+	.navbar-fixed-top {
+		position: static;
+		margin-bottom: $baselineHeight;
+	}
+
+	.navbar .container {
+		width: auto;
+		padding: 0;
+	}
+
+	.navbar .logo {
+		padding-left: 10px;
+		padding-right: 10px;
+		margin: 0 0 0 -5px;
+	}
+
+	.nav-collapse {
+		clear: both;
+	}
+
+	.nav-collapse .nav {
+		float: none;
+		margin: 0 0 $baselineHeight / 2
+	}
+
+	.nav-collapse .nav > li > a {
+		margin-bottom: 2px;
+	}
+
+	// Static Navbar
+	.navbar-static .navbar-item {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
 }
 
-nav ul {
-	list-style: none;
-	margin: 0 10px;
-	padding: 0;
-}
+@include laptop{
+	.nav-collapse.collapse {
+		height: auto !important;
+		overflow: visible !important;
+	}
 
-nav li {
-	display: inline-block;
-}
+	nav {
+		margin-top: -170px;
+		text-align: right;
+		padding: 60px 0 0 0;
+	}
 
-nav a {
-	padding: 15px 10px;
-	font-size: 18px;
-	font-weight: bold;
-	text-decoration: none;
-	color: $black;
-}
+	nav ul {
+    	list-style: none;
+    	margin: 0 10px;
+    	padding: 0;
+    }
 
-nav a:visited {
-	color: black;
-}
+    nav li {
+    	display: inline-block;
+    }
 
-nav a:hover {
-	color: green;
-}
+    nav a {
+    	padding: 15px 10px;
+    	font-size: 18px;
+    	font-weight: bold;
+    	text-decoration: none;
+    	color: $black;
+    }
 
-nav a.selected {
-	color: red;
+    nav a:visited {
+    	color: black;
+    }
+
+    nav a:hover {
+    	color: green;
+    }
+
+    nav a.selected {
+    	color: red;
+    }
 }
