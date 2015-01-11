@@ -30,7 +30,7 @@ $large-screen: 1281px;
 ** Usage:- @include mobileLandscape {// Do something special}
 ********************************************************************************/
 @mixin mobileLandscape{
-	@media screen and (max-width: $mobile-Landscape) {
+	@media screen and (max-width: $mobile-landscape) {
 		@content
  	}
 }
