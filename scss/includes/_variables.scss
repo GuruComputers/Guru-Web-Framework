@@ -5,3 +5,5 @@ $marginWidth: 0.5%; // margin width of gutters between columns. Change as needed
 $h_center: 0 auto;
 $v_center: auto 0;
 $centralize: auto auto;
+$linkColor: $blue;
+$linkHover: lighten($blue, 20%);
