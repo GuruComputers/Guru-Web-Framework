@@ -5,3 +5,18 @@ $mobile-landscape: 481px;
 $laptop: 1025px;
 $large-screen: 1281px;
 
+ @media screen and (max-width: $mobile-portrait) {
+ 	$pageWidth: $mobile-portrait;
+ }
+
+  @media screen and (max-width: $mobile-landscape) {
+ 	$pageWidth: $mobile-landscape;
+ }
+
+  @media screen and (max-width: $laptop) {
+ 	$pageWidth: $laptop;
+ }
+
+  @media screen and (max-width: $large-screen) {
+ 	$pageWidth: $large-screen;
+ }
