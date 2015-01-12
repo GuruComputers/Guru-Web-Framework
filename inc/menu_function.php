@@ -38,9 +38,6 @@ function create_menu($type,$seperator,$menuArray,$anchorArray) {
 		}
 		echo '</ul>'."\n";
     } 
-
+return 0;
  }
-$menuArray = array("About", "Server Status", "Free Hosting", "Premium Hosting", "Design Services", "Contact");
-$anchorArray = array("1","2","3","4","5","6");
-create_menu("menu",false,$menuArray,$anchorArray);
 ?>
