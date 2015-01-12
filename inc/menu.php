@@ -3,7 +3,7 @@
 	echo '<ul>'."\n";
 	foreach ($menu as $item) {
 		if ($item != "Contact"){
-			echo '<li>'.$item.'</li>'.' | '."\n";
+			echo '<li>'.$item.'</li>'.' <b class="seperator"> | </b>'."\n";
 		} else {
 			echo '<li>'.$item.'</li>'."\n";
 		}
