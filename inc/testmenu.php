@@ -3,7 +3,7 @@ function create_menu($type,$seperator,$menuArray,$anchorArray) {
     $length = count($menuArray);
 
     if ($type == "list"){
-    	echo '<ul>'."\n";
+    	echo '<ul class="list">'."\n";
 		foreach ($menuArray as $item) {
 			if ($item != $menuArray[$length-1] && $seperator == true){
 				echo '<li>'.$item.'</li>'.' <b class="seperator"> | </b>'."\n";
@@ -15,7 +15,7 @@ function create_menu($type,$seperator,$menuArray,$anchorArray) {
     } 
 
      if ($type == "dynamic"){
-    	echo '<ul>'."\n";
+    	echo '<ul class="dynamic">'."\n";
 		foreach ($menuArray as $item) {
 			if ($item != $menuArray[$length-1] && $seperator == true){
 				echo '<li>'.$item.'</li>'.' <b class="seperator"> | </b>'."\n";
@@ -27,7 +27,7 @@ function create_menu($type,$seperator,$menuArray,$anchorArray) {
     } 
 
     if ($type == "menu"){
-    	echo '<ul>'."\n";
+    	echo '<ul class="menu">'."\n";
 		foreach ($menuArray as $item) {
 			$position = array_search($item, $menuArray);
 			if ($item != $menuArray[$length-1] && $seperator == true){
