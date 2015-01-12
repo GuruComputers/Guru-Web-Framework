@@ -31,9 +31,9 @@ function create_menu($type,$seperator,$menuArray,$anchorArray) {
 		foreach ($menuArray as $item) {
 			$position = array_search($item, $menuArray);
 			if ($item != $menuArray[$length-1] && $seperator == true){
-				echo '<li><a href="'.$anchorArray[$position].'">'.$item.'</li></a>'.' <b class="seperator"> | </b>'."\n";
+				echo '<li><a href="'.$anchorArray[$position].'">'.$item.'</a></li>'.' <b class="seperator"> | </b>'."\n";
 			} else {
-				echo '<li><a href="'.$anchorArray[$position].'">'.$item.'</li></a>'."\n";
+				echo '<li><a href="'.$anchorArray[$position].'">'.$item.'<a></li>'."\n";
 			}
 		}
 		echo '</ul>'."\n";
