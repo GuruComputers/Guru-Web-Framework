@@ -24,7 +24,7 @@
 		<nav>
 			<?php
 				$menuArray = array("About", "Server Status", "Free Hosting", "Premium Hosting", "Design Services", "Contact");
-				create_menu("dynamic",true,$menuArray);
+				create_menu("list",true,$menuArray);
 			?>
 		</nav>
 	</header>
