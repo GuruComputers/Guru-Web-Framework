@@ -1,11 +1,9 @@
-/* Navigation (with dropdowns) */
-
 nav {
   width: 100%;
   min-height: 60px;
   display: block;
   margin-bottom: 20px;
-  background: $navbar-color; // Change this color in settings to change the navbar color
+  background: $navbar-colour;
   position: relative;
   @include respond(all-phones) {
     border: none;
@@ -32,16 +30,16 @@ nav {
       position: absolute;
       text-align: center;
       display: inline-block;
-      color: $navbar-link-color;
-      background: $navbar-color;
+      color: $navbar-link-colour;
+      background: $navbar-colour;
       @include line-and-height(40px);
       @include border-radius($button-radius);
       @include font-size($larger);
       &:hover {
-        background: lighten($navbar-color, 5%);
+        background: lighten($navbar-colour, 5%);
       }
       &:active, &.active {
-        background: darken($navbar-color, 5%);
+        background: darken($navbar-colour, 5%);
       }
     }
   }
@@ -94,13 +92,13 @@ nav ul {
     left: 0;
     overflow: hidden;
     text-align: center;
-    background: darken($navbar-color, 5%);
+    background: darken($navbar-colour, 5%);
     &.active {
       height: auto;
       max-height: 600px;
       z-index: 999998;
       @include transition-duration(.5s);
-      @include box-shadow(0 2px 2px darken($navbar-color, 15%));
+      @include box-shadow(0 2px 2px darken($navbar-colour, 15%));
     }
   }
 
@@ -129,8 +127,8 @@ nav ul {
       padding: 0 ms(0);
       white-space: nowrap;
       color: $navbar-link-color;
-      text-shadow: 0 1px 2px darken($navbar-color, 20%),
-                   0 1px 0 darken($navbar-color, 20%);
+      text-shadow: 0 1px 2px darken($navbar-colour, 20%),
+                   0 1px 0 darken($navbar-colour, 20%);
       @include line-and-height(height-calc($larger - 3));
       @include font-size($norm);
       i.icon-popup {
@@ -147,9 +145,9 @@ nav ul {
         padding: 0 $gutter-in-px;
       }
       input.search {
-        background: darken($navbar-color, 20%);
+        background: darken($navbar-colour, 20%);
         border: none;
-        color: $default-color;
+        color: $default-colour;
       }
     }
     .dropdown {
@@ -158,7 +156,7 @@ nav ul {
       max-width: $min-device-width;
       height: 0;
       position: absolute;
-      background: lighten($default-color, 3%);
+      background: lighten($default-colour, 3%);
       overflow: hidden;
       z-index: 999;
     }
@@ -171,12 +169,12 @@ nav ul {
         @include box-shadow(none !important);
       }
       &.active .dropdown {
-        border-bottom: 1px solid darken($navbar-color, 10%);
+        border-bottom: 1px solid darken($navbar-colour, 10%);
       }
       &.active .dropdown ul {
         position: relative;
         top: 0;
-        background: darken($navbar-color, 8%);
+        background: darken($navbar-colour, 8%);
         min-height: 50px;
         max-height: 250px;
         height: auto;
@@ -184,11 +182,11 @@ nav ul {
         @include box-shadow(none !important);
         li {
           min-height: 50px;
-          border-bottom: darken($navbar-color, 5%);
+          border-bottom: darken($navbar-colour, 5%);
           a {
             color: $white;
-            border-bottom: 1px solid darken($navbar-color, 10%);
-            &:hover {color: $body-link-color;}
+            border-bottom: 1px solid darken($navbar-colour, 10%);
+            &:hover {color: $body-link-colour;}
           }
         }
       }
@@ -218,29 +216,29 @@ nav {
 // Pretty Navigation Styles
 
 .pretty.navbar {
-  @include background-image(linear-gradient(lighten($navbar-color, 20%),darken($navbar-color, 10%)));
-  @include box-shadow(inset 0 1px 1px lighten($navbar-color, 20%),
+  @include background-image(linear-gradient(lighten($navbar-colour, 20%),darken($navbar-color, 10%)));
+  @include box-shadow(inset 0 1px 1px lighten($navbar-colour, 20%),
           0 1px 2px rgba(0,0,0,0.80) !important); /* Remove this line if you dont want a dropshadow on your navigation*/
 
   // Pretty Nav Toggle Styles
   @include respond(all-phones) {
     a.toggle {
-      border: 1px solid darken($navbar-color, 5%);
-      @include background-image(linear-gradient(lighten($navbar-color, 20%), $navbar-color));
-      @include box-shadow(inset 0 1px 2px lighten($navbar-color, 25%),
-        inset 0 -1px 1px lighten($navbar-color, 5%),
-        inset 1px 0 1px lighten($navbar-color, 5%),
-        inset -1px 0 1px lighten($navbar-color, 5%),
-        0 1px 1px lighten($navbar-color, 10%));
+      border: 1px solid darken($navbar-colour, 5%);
+      @include background-image(linear-gradient(lighten($navbar-colour, 20%), $navbar-color));
+      @include box-shadow(inset 0 1px 2px lighten($navbar-colour, 25%),
+        inset 0 -1px 1px lighten($navbar-colour, 5%),
+        inset 1px 0 1px lighten($navbar-colour, 5%),
+        inset -1px 0 1px lighten($navbar-colour, 5%),
+        0 1px 1px lighten($navbar-colour, 10%));
       i {
-        @include text-shadow(0 1px 1px darken($navbar-color, 20%));
+        @include text-shadow(0 1px 1px darken($navbar-colour, 20%));
       }
       &:hover {
-        @include background-image(linear-gradient(lighten($navbar-color, 25%), lighten($navbar-color, 5%)));
+        @include background-image(linear-gradient(lighten($navbar-colour, 25%), lighten($navbar-color, 5%)));
       }
       &:active, &.active {
-        @include background-image(linear-gradient(darken($navbar-color, 5%), $navbar-color));
-        @include box-shadow(0 1px 1px lighten($navbar-color, 10%));
+        @include background-image(linear-gradient(darken($navbar-colour, 5%), $navbar-color));
+        @include box-shadow(0 1px 1px lighten($navbar-colour, 10%));
       }
     }
   }
@@ -251,9 +249,9 @@ nav {
     }
   }
   ul li.field input.search {
-    @include background-image(linear-gradient(darken($navbar-color, 20%), lighten($navbar-color, 2%)));
+    @include background-image(linear-gradient(darken($navbar-colour, 20%), lighten($navbar-color, 2%)));
     border: none;
-    @include box-shadow(0 1px 2px lighten($navbar-color, 25%) !important); /* Remove this line if you dont want a dropshadow on your navigation*/
+    @include box-shadow(0 1px 2px lighten($navbar-colour, 25%) !important); /* Remove this line if you dont want a dropshadow on your navigation*/
   }
   > ul > li:first-child, .pretty.navbar > ul > li:first-child a:hover {
     @include box-shadow(none);
@@ -268,7 +266,7 @@ nav li .dropdown {
   max-width: $min-device-width;
   height: 0;
   position: absolute;
-  background: lighten($default-color, 3%);
+  background: lighten($default-colour, 3%);
   overflow: hidden;
   z-index: 999;
   // Navigation Dropdown Mobile Specific Styles
@@ -280,12 +278,12 @@ nav li .dropdown {
       @include box-shadow(none !important);
     }
     &.active .dropdown {
-      border-bottom: 1px solid darken($navbar-color, 10%);
+      border-bottom: 1px solid darken($navbar-colour, 10%);
     }
     &.active .dropdown ul {
       position: relative;
       top: 0;
-      background: darken($navbar-color, 8%);
+      background: darken($navbar-colour, 8%);
       min-height: 50px;
       max-height: 250px;
       height: auto;
@@ -293,11 +291,11 @@ nav li .dropdown {
       @include box-shadow(none !important);
       li {
         min-height: 50px;
-        border-bottom: darken($navbar-color, 5%);
+        border-bottom: darken($navbar-colour, 5%);
         a {
           color: $white;
-          border-bottom: 1px solid darken($navbar-color, 10%);
-          &:hover {color: $body-link-color;}
+          border-bottom: 1px solid darken($navbar-colour, 10%);
+          &:hover {color: $body-link-colour;}
         }
       }
     }
@@ -322,8 +320,8 @@ nav li .dropdown ul {
     a {
       display: block;
       padding: 0 20px;
-      color: $body-link-color;
-      border-bottom: 1px solid $horizontal-rule-color;
+      color: $body-link-colour;
+      border-bottom: 1px solid $horizontal-rule-colour;
       text-shadow: none;
       @include line-and-height(height-calc($large - 3));
       @include respond(all-phones) {
@@ -332,7 +330,7 @@ nav li .dropdown ul {
     }
     .dropdown {
       display: none;
-      background: lighten($default-color, 10%);
+      background: lighten($default-colour, 10%);
     }
   }
   li:first-child a {
