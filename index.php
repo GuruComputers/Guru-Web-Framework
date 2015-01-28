@@ -29,7 +29,7 @@
 			</div>
 			<?php
 				$menuArray = array("About", "Server Status", "Free Hosting", "Premium Hosting", "Design Services", "Contact");
-				create_menu("list",true,$menuArray);
+				create_menu("menu",true,$menuArray);
 			?>
 		</nav>
 	</header>
