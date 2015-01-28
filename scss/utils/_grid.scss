@@ -1,167 +1,48 @@
-$row-max-width: 940px !default;
-$gutter-in-px: 20px !default;
-$gutter: percentage($gutter-in-px / $row-max-width); // 2.1276596
-$cols: 20 !default;
-$hybrid: 12 !default;
-$adwall: 50 !default;
+// Set Grid
+$columns: 20;
+$column-width: 4%;
+$gutter: 1%;
+$padding: $gutter / 2;
 
-%zero-margin-left {
-    margin-left: 0;
-}
+$grid-width: ($column-width * $columns) + ($gutter * ($columns - 1));
 
+// Setup Base Container
 .row {
-    width: 100%;
-    max-width: $row-max-width + 40px;
-    min-width: $min-device-width;
+    width:$grid-width;
     margin: 0 auto;
-    padding-left: $gutter-in-px;
-    padding-right: $gutter-in-px;
-    .row {
-        min-width: 0;
-        padding-left: 0;
-        padding-right: 0;
-    }
+    padding: 0 $padding 0 $padding;
+    text-align: center;
 }
 
-.column, .columns {
-    margin-left: $gutter;
-    float: $default-float;
-    min-height: 1px;
-    @include box-sizing(border-box);
+// Define Individual Grid Classes
+// Define Individual Grid Classes
+@for $i from 1 to $columns
+{
+
+    // Calculate grid size in pixels
+    $grid: ($column-width * $i) + ($gutter * ($i - 1));
+    
+    // Calculate responsive grid sizes
+    // Convert Pixels to Percentages
+    $grid: ($grid / $grid-width) * 100%;
+
+
+    .grid#{$i}
+        {
+        width: $grid;
+        float: left;
+        margin-left: $gutter;
+        text-align: center;
+        }
 }
 
-.column:first-child, .columns:first-child, .alpha {
-    margin-left: 0;
+.clear
+{
+margin-left: 0px;
+clear: left;
 }
 
-.column.omega, columns.omega {
-    float: $switch-float;
-}
-
-// Generate Column Classes
-.row {
-    @for $i from 1 through $cols{
-        @if $i == 1 {
-            .one.column {
-                width: colums($i);
-            }
-        }
-        .#{number-as-word($i)}.columns {
-            width: columns($i);
-        }
-    }
-}
-
-// Generate Push and Pull Classes
-.row {
-  @for $i from 1 through $cols - 1 {
-    .push_#{number-as-word($i)} {
-      margin-left: push_x($i);
-        &:first-child {
-        margin-left: push_x($i, true);
-      }
-    }
-    .pull_#{number-as-word($i)} {
-      // pull classes need to know the width of the container being pulled
-      @for $j from 1 through $cols - 1 {
-        @if $i + $j == $cols {
-          &.#{number-as-word($j)}.columns {
-            @extend %pull-100-percent;
-          }
-        }
-        @elseif $j == 1 {
-          &.one.column {
-            margin-left: pull_x($i, $j);
-            &:first-child {
-              @extend %zero-margin-left;
-            }
-          }
-        }
-        @else {
-          &.#{number-as-word($j)}.columns {
-            margin-left: pull_x($i, $j);
-            &:first-child {
-              @extend %zero-margin-left;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-// Generate Centered Classes
-.row {
-    @for $i from 1 through $cols - 1 {
-        .#{number-as-word($i)}.centered {
-            margin-left: centered($i);
-        }
-    }
-}
-
-%zero-margin-left {
-  margin-left: 0;
-}
-
-%pull-100-percent {
-  margin-left: -100%;
-}
-
-/* Mobile */
-
-@include respond(all-phones) {
-    body {
-        -webkit-text-size-adjust: none;
-        -ms-text-size-adjust: none;
-        width: 100%;
-        min-width: 0;
-    }
-    .container {
-        min-width: 0;
-        margin-left: 0;
-        margin-right: 0;
-    }
-    .row {
-        width: 100%;
-        min-width: 0;
-        margin-left: 0;
-        margin-right: 0;
-        .row {
-            .column, .columns {
-                padding: 0;
-            }
-        }
-        .centered {
-            margin-left: 0 !important;
-        }
-    }
-    .column, .columns {
-        width: auto !important;
-        float: none;
-        margin-left: 0;
-        margin-right: 0;
-    }
-    .column:last-child, .columns:last-child {
-        margin-right: 0;
-        float: none;
-    }
-
-    [class*="column"] {
-        + [class*="column"]:last-child {
-            float: none;
-        }
-        &:before {
-            display: table;
-        }
-        &:after {
-            display: table;
-            clear: both;
-        }
-    }
-    [class^="push_"],
-    [class*="push_"],
-    [class^="pull_"],
-    [class*="pull_"] {
-        margin-left: 0 !important;
-    }
+.centered {
+    margin-left: auto;
+    margin-right: auto;
 }

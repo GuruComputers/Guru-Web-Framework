@@ -13,7 +13,6 @@
 @import "elements/borders";
 @import "includes/colours";
 @import "includes/fonts";
-@import "includes/grid-calc";
 @import "utils/grid";
 
 // Styling Dependencies
@@ -22,4 +21,4 @@
 @import "io/media";
 @import "io/search_form";
 @import "io/twitter_feed";
-@import "sections/footer";
+@import "sections/fixed_footer";

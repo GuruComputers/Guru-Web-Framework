@@ -33,70 +33,15 @@
 				?>
 			</nav>
 		</header>
-		<br /><br />
-		<div class="row">
-			<h1>Heading 1</h1>
-			<h2>Heading 2</h2>
-			<h3>Heading 3</h3>
-			<h4>Heading 4</h4>
-			<h5>Heading 5</h5>
-			<h6>Heading 6</h6>
-			<div class="four columns">
-				<img src="img/logo.png" alt="logo" class="item-pic center">
-				<h4 class="lead">Box 1</h4>
-				<p class="disc">Lorem ipsum text</p>
-			</div>
-			<div class="four columns">
-				<img src="img/logo.png" alt="logo" class="item-pic center">
-				<h4 class="lead">Box 2</h4>
-				<p class="disc">Lorem ipsum text</p>
-			</div>
-			<div class="four columns">
-				<img src="img/logo.png" alt="logo" class="item-pic center">
-				<h4 class="lead">Box 3</h4>
-				<p class="disc">Lorem ipsum text</p>
-			</div>
-			<div class="four columns">
-				<img src="img/logo.png" alt="logo" class="item-pic center">
-				<h4 class="lead">Box 4</h4>
-				<p class="disc">Lorem ipsum text</p>
-			</div>
-		</div>
-		<div class="row">
-			<div class="four columns">
-				<img src="img/logo.png" alt="logo" class="item-pic center">
-				<h4 class="lead">Box 5</h4>
-				<p class="disc">Lorem ipsum text</p>
-			</div>
-			<div class="four columns">
-				<img src="img/logo.png" alt="logo" class="item-pic center">
-				<h4 class="lead">Box 6</h4>
-				<p class="disc">Lorem ipsum text</p>
-			</div>
-			<div class="four columns">
-				<img src="img/logo.png" alt="logo" class="item-pic center">
-				<h4 class="lead">Box 7</h4>
-				<p class="disc">Lorem ipsum text</p>
-			</div>
-			<div class="four columns">
-				<img src="img/logo.png" alt="logo" class="item-pic center">
-				<h4 class="lead">Box 8</h4>
-				<p class="disc">Lorem ipsum text</p>
-			</div>
-		</div>
-		<div class="row">
-			<div class="four columns">
-				<img src="img/logo.png" alt="logo" class="item-pic center">
-				<h4 class="lead">Box 9</h4>
-				<p class="disc">Lorem ipsum text</p>
-			</div>
-			<div class="four columns">
-				<img src="img/logo.png" alt="logo" class="item-pic center">
-				<h4 class="lead">Box 10</h4>
-				<p class="disc">Lorem ipsum text</p>
-			</div>
-		</div>
+		<h1>Heading 1</h1>
+		<h2>Heading 2</h2>
+		<h3>Heading 3</h3>
+		<h4>Heading 4</h4>
+		<h5>Heading 5</h5>
+		<h6>Heading 6</h6>
+		<?php include 'grid.php'; ?>
 	</div>
+	<div id="pre-footer"> </div>
 	<footer>
 		<h1>I'm a footer</h1>
 		<br />
