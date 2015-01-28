@@ -9,9 +9,6 @@ $large-screen: 1281px;
 $max-device-width: 2880px;
 
 @function breakpoint($breakpoint) {
-  @if $breakpoint == $document-width {
-    @return $document-width - 1;
-  }
   @if $breakpoint == $tablet-device-width {
   	@return $tablet-device-width - 1;
   }
