@@ -1,4 +1,5 @@
 <?php
+	$page = "home";
 	include_once 'inc/menu_function.php';
 ?>
 <!DOCTYPE html>
