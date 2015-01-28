@@ -1,16 +1,9 @@
-#content {
-	margin-bottom: -142px;
-}
-
-#content:after {
-	content: "";
-	display: block;
-}
-
-footer, #content:after {
-	height: 142px;
-}
-
 footer {
+	position: fixed;
+	top: 100%;
+	width: 100%;
+	margin-top: -90px;
+    height: 90px;
+    clear: both;
 	background: $footer-colour;
 }

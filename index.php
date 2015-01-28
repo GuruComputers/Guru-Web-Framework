@@ -95,16 +95,6 @@
 				<h4 class="lead">Box 10</h4>
 				<p class="disc">Lorem ipsum text</p>
 			</div>
-			<div class="four columns">
-				<img src="img/logo.png" alt="logo" class="item-pic center">
-				<h4 class="lead">Box 11</h4>
-				<p class="disc">Lorem ipsum text</p>
-			</div>
-			<div class="four columns">
-				<img src="img/logo.png" alt="logo" class="item-pic center">
-				<h4 class="lead">Box 12</h4>
-				<p class="disc">Lorem ipsum text</p>
-			</div>
 		</div>
 	</div>
 	<footer>
