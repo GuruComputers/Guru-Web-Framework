@@ -65,7 +65,7 @@ p {font-size: 1em;}
 }
 
 .item-pic {
-    @include respond-to(mobile-portrait){
+    @include respond(all-phones){
         display: none;
     }
 }

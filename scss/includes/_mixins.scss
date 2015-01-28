@@ -231,6 +231,9 @@
   height: $height;
   line-height: $height - 2;
 }
+@function height-calc($size) {
+  @return ms($ms-ratio, $size) + 1;
+}
 
 //-----------------------------------------------------------------------
 // Name:- clearfix

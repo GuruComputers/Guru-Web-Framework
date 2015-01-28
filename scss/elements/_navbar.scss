@@ -38,7 +38,7 @@
     	float: none;
 
     	// Navbar Mobile Responsiveness
-    	@include respond-to(mobile-portrait) {
+    	@include respond(all-phones) {
     		position: absolute;
     		display: block;
     		width: 100% !important;
@@ -57,7 +57,7 @@
 
     nav li {
     	display: inline-block;
-    	@include respond-to(mobile-portrait) {
+    	@include respond(all-phones) {
     		display: block;
     		position: relative;
     		min-height: 50px;
@@ -92,8 +92,8 @@
     	display: inline-block;
     	margin: 0 $marginWidth 0 0;
     	padding: 0;
-
-    	@include respond-to(mobile-portrait) {
+        @include line-and-height(height-calc($larger - 3));
+    	@include respond(all-phones) {
     		float: left;
     		display: block;
     		width: 400px;
