@@ -122,7 +122,7 @@ nav ul {
       @include transition-duration(.5s);
     }
 
-    > a {
+    > a, a:visited {
       display: block;
       padding: 0 ms(0);
       white-space: nowrap;
@@ -329,4 +329,9 @@ nav li .dropdown ul {
   li:first-child a {
     @include border-radius(0);
   }
+}
+
+.menu {
+    position: relative;
+    float: right;
 }
