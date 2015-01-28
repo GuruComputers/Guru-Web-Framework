@@ -41,3 +41,23 @@ $default-button-height: 36px;
 	}
 }
 
+.btn, .skiplink {
+	&.xlarge {
+		@include button-size(xlarge);
+	}
+	&.large {
+		@include button-size(large);
+	}
+	&.medium {
+		@include button-size(medium);
+		a {
+			padding: 0 ms(1);
+		}
+	}
+	&.small {
+		@include button-size(small);
+		a {
+			padding: 0 ms(-1);
+		}
+	}
+}

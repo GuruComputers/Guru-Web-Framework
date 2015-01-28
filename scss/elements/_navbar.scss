@@ -135,6 +135,15 @@ nav ul {
         position: absolute;
       }
     }
+
+    > a:hover {
+        color: $primary-colour;
+    }
+
+    > a .selected {
+        color: $secondary-colour;
+    }
+
     .btn {
       border-color: darken($navbar-colour, 30%) !important;
     }
@@ -208,7 +217,7 @@ nav {
 
 // Pretty Navigation Styles
 
-.pretty.navbar {
+nav .pretty {
   @include background-image(linear-gradient(lighten($navbar-colour, 20%),darken($navbar-colour, 10%)));
   @include box-shadow(inset 0 1px 1px lighten($navbar-colour, 20%),
           0 1px 2px rgba(0,0,0,0.80) !important); /* Remove this line if you dont want a dropshadow on your navigation*/

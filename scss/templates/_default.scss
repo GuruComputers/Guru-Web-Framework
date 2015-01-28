@@ -10,10 +10,16 @@
     box-sizing: border-box; /* Opera/IE 8+ */
 }
 
-img {
+.item-pic {
     border:0 none;
     width: $defaultImageWidth;
     height: auto;
+}
+
+.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 html {
