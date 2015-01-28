@@ -5,8 +5,29 @@ $blue: #0000ff;
 $gray: #888888;
 $white: #ffffff;
 $black: #000000;
+$gurugreen: #6cb369;
+$gurugold: #dec43e;
 $linkColour: $blue;
 $linkHoverColour: lighten($blue, 20%);
 
 // User Interface colours
 $global-bg-colour: #fff;
+$navbar-colour: #4a4d50;
+$navbar-link-colour: #fff;
+$primary-colour: $gurugreen;
+$secondary-colour: $gurugold;
+$default-colour: #f2f2f2;
+$info-colour: #4a4d50;
+$danger-colour: #ca3838;
+$warning-colour: #f6b83f;
+$success-colour: #58c026;
+
+$primary-hover-colour: lighten($primary-colour, 20%);
+$secondary-hover-colour: lighten($secondary-colour, 20%);
+$default-hover-colour: lighten($default-colour, 20%);
+$info-hover-colour: lighten($info-colour, 20%);
+$danger-hover-colour: lighten($danger-colour, 20%);
+$warning-hover-colour: lighten($warning-colour, 20%);
+$success-hover-colour: lighten($success-colour, 20%);
+
+$horizontal-rule-colour: #ccc !default;
