@@ -9,6 +9,7 @@
 		padding: 60px 0 0 0;
 		display: block;
 		position: relative;
+        background: $navbar-colour;
 
 		&.fixed {
 			position: fixed;
@@ -19,7 +20,7 @@
 			position: absolute;
 		}
 
-		@include respond-to(mobile-portrait) {
+		@include respond(all-phones) {
 			top: 160px;
 			right: 4%;
 			width: 300px;
