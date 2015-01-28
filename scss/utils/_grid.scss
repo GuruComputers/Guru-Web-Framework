@@ -99,6 +99,14 @@ $adwall: 50 !default;
     }
 }
 
+%zero-margin-left {
+  margin-left: 0;
+}
+
+%pull-100-percent {
+  margin-left: -100%;
+}
+
 /* Mobile */
 
 @include respond(all-phones) {
