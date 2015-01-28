@@ -23,7 +23,9 @@
 	<header>
 		<nav>
 			<div class="logo">
-				<img src="img/logo.png" alt="logo">
+				<a href="http://www.guruweb.co.uk/framework">
+					<img src="img/logo.png" alt="logo">
+				</a>
 			</div>
 			<?php
 				$menuArray = array("About", "Server Status", "Free Hosting", "Premium Hosting", "Design Services", "Contact");

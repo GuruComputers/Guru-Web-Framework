@@ -114,6 +114,7 @@
     	margin: 0 $marginWidth 0 0;
     	padding: 0;
         width: $logowidth;
+        height: auto;
         @include line-and-height(height-calc($larger - 3));
         a {
             display: block;
@@ -121,7 +122,8 @@
             overflow: hidden;
             @include line-and-height(height-calc($larger - 3));
             img {
-                max-height: 95%;
+                max-width: $logowidth;
+                height: auto;
             }
         }
     	@include respond(all-phones) {
@@ -137,3 +139,62 @@
             }
     	}
     }
+
+    nav ul {
+        display: table;
+        vertical-align: middle;
+        margin: 0;
+        float: none;
+
+        // Mobile Nav Bar
+        @include respond(all-phones) {
+            position: absolute;
+            display: block;
+            width: 100% !important;
+            height: 0;
+            max-height: 0;
+            top: 60px;
+            left: 0;
+            overflow: hidden;
+            text-align: center;
+            background: darken($navbar-colour, 5%);
+            &.active {
+                height: auto;
+                max-height: 600px;
+                z-index: 999998;
+                @include box-shadow(0 2px 2px darken($navbar-colour, 15%));
+            }
+        }
+
+        li {
+            display: table-cell;
+            text-align: center;
+            padding-bottom: 0;
+            margin: 0;
+            @include line-and-height(height-calc($larger -3));
+
+            // Mobile Navbar List Item
+            @include respond(all-phones) {
+                display: block;
+                position: relative;
+                min-height: 50px;
+                max-height: 320px;
+                height: auto;
+                width: 100%;
+                border-right: 0 !important;
+            }
+
+            > a {
+                display: block;
+                padding: 0 ms(0);
+                white-space: nowrap;
+                color: $navbar-link-colour;
+                text-shadow: 0 1px 2px darken($navbar-colour, 20%),
+                             0 1px 0 darken($navbar-colour, 20%);
+                @include line-and-height(height-calc($larger - 3));
+                @include font-size($norm);
+                i.icon-popup {
+                    position: absolute;
+                }
+            }
+        }
