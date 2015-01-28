@@ -132,7 +132,7 @@
 //-----------------------------------------------------------------------
 // Coded by:- Dave Wakely
 // Last Updated:- 28/01/2015
-// Usage:- strip-units($base-font-size)
+// Usage:- respond($media)
 //-----------------------------------------------------------------------
 @mixin respond($media) {
   @if $media == portrait-phones {
@@ -165,4 +165,180 @@
   @else {
     @media only screen and ('#{$media}') { @content; }
   }
+}
+
+//-----------------------------------------------------------------------
+// Name:- button-size
+// Description:- Configure Button Size
+//-----------------------------------------------------------------------
+// Coded by:- Dave Wakely
+// Last Updated:- 28/01/2015
+// Usage:- button-size($size)
+//-----------------------------------------------------------------------
+@mixin button-size($size) {
+  $n: 0;
+  @if $size == xlarge {
+    $n: $xlarge-button-font-size;
+  }
+  @if $size == large {
+    $n: $large-button-font-size;
+  }
+  @if $size == medium {
+    $n: $medium-button-font-size;
+  }
+  @if $size == small {
+    $n: $small-button-font-size;
+  }
+  $button-font-size: $n;
+  $button-height: ms($ms-ratio, $button-font-size) + 1;
+  $line-height: $button-height -2;
+
+  @include font-size($button-font-size);
+
+  a {
+    position: relative;
+    padding: 0 ms(0, $button-font-size);
+  }
+
+  &.icon-left {
+    a {
+      padding-left: $button-height;
+      &:before {
+        left: $button-font-size / 1.5;
+      }
+    }
+  }
+
+  &.icon-right {
+    a {
+      padding-right: $button-height;
+      &:after {
+        right: $button-font-size / 1.5;
+      }
+    }
+  }
+}
+
+//-----------------------------------------------------------------------
+// Name:- line-and-height
+// Description:- Calculate Line Height from Element Height
+//-----------------------------------------------------------------------
+// Coded by:- Dave Wakely
+// Last Updated:- 28/01/2015
+// Usage:- line-and-height($height)
+//-----------------------------------------------------------------------
+@mixin line-and-height($height) {
+  height: $height;
+  line-height: $height - 2;
+}
+
+//-----------------------------------------------------------------------
+// Name:- clearfix
+// Description:- Clearfix for Mobile Phones
+//-----------------------------------------------------------------------
+// Coded by:- Dave Wakely
+// Last Updated:- 28/01/2015
+// Usage:- mobilefix()
+//-----------------------------------------------------------------------
+@mixin mobilefix() {
+  @include respond(all-phones) { 
+    &:before, &:after {
+      content: " ";
+      display: table;
+    }
+    &:after {
+      clear: both;
+    }
+    &:last-child {
+      float: none;
+    }
+  }
+}
+
+//-----------------------------------------------------------------------
+// Name:- em
+// Description:- Convert pixels to ems
+//-----------------------------------------------------------------------
+// Coded by:- Dave Wakely
+// Last Updated:- 28/01/2015
+// Usage:- em($pixels)
+//-----------------------------------------------------------------------
+@function em($size-in-px, $context: 16) {
+  @if not unitless($size-in-px) {
+      $size-in-px: strip-units($size-in-px);
+  }
+  @if not unitless($context) {
+      $context: strip-units($context);
+  }
+  @return ($size-in-px / $context) * 1em;
+}
+
+//-----------------------------------------------------------------------
+// Name:- even
+// Description:- Test for Even Numbers, Do Something with the result
+//-----------------------------------------------------------------------
+// Coded by:- Dave Wakely
+// Last Updated:- 28/01/2015
+// Usage:- even($number)
+//-----------------------------------------------------------------------
+@function even($number) {
+  @if ($number % 2 == 0) {
+    @return true;
+  }
+  @else {
+    @return false;
+  }
+}
+
+//-----------------------------------------------------------------------
+// Name:- fade
+// Description:- Fading Mixin
+//-----------------------------------------------------------------------
+// Coded by:- Dave Wakely
+// Last Updated:- 28/01/2015
+// Usage:- fade($direction, $duration)
+//-----------------------------------------------------------------------
+$fade-duration: .6s;
+
+@mixin fade($direction: out, $duration: $fade-duration) {
+
+  @if $direction != out {
+    visibility: visible;
+    @include opacity(1);
+  }
+
+  @else {
+    visibility: hidden;
+    @include opacity(0);
+  }
+
+  @include transition-property(opacity);
+  @include transition-duration($fade-duration);
+
+}
+
+//-----------------------------------------------------------------------
+// Name:- input-size
+// Description:- Calculate Form Sizes
+//-----------------------------------------------------------------------
+// Coded by:- Dave Wakely
+// Last Updated:- 28/01/2015
+// Usage:- input-size($size)
+//-----------------------------------------------------------------------
+@mixin input-size($size) {
+  @if $size == xxwide { $size: 100%; }
+  @if $size == xwide { $size: 82.6666666667%; }
+  @if $size == wide { $size: 65.3333333333%; }
+  @if $size == normal { $size: 48%; }
+  @if $size == narrow { $size: 30.6666666667%; }
+  @if $size == xnarrow { $size: 13.3333333333%; }
+
+  width: $size;
+}
+@mixin input-sizes-list() {
+  $sizes: ();
+  @each $item in $field-sizes {
+    $sizes: join($sizes, unquote(".#{$item} "), comma);
+  }
+  #{$sizes} { @content }
 }

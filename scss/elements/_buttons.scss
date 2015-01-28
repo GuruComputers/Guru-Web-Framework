@@ -1,0 +1,43 @@
+//Button Font Sizing
+$xlarge-button-font-size: $larger;
+$large-button-font-size: $large;
+$medium-button-font-size: $norm;
+$small-button-font-size: $small;
+
+// Padding
+$default-button-padding: $med;
+
+// Height
+$default-button-height: 36px;
+
+// Button Structure
+.btn, .skiplink {
+	display: inline-block;
+	width: auto;
+	background: $default-colour;
+	-webkit-appearance: none;
+	font-family: $font-family;
+	font-weight: $button-font-weight;
+	padding: 0 !important;
+	text-align: center;
+	.pretty & { @extend .pretty.btn;}
+	.metro & { @extend .metro.btn; }
+
+	> a, input, button {
+		display: block;
+		padding: 0 $default-button-padding;
+		color: $white;
+		height: 100%;
+	}
+
+	input, button {
+		background: none;
+		border: none;
+		width: 100%;
+		font-size: 100%;
+		cursor: pointer;
+		font-weight: $type-font-weight;
+		@include appearance(none);
+	}
+}
+
