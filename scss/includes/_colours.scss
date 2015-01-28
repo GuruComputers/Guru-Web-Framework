@@ -7,13 +7,15 @@ $white: #ffffff;
 $black: #000000;
 $gurugreen: #6cb369;
 $gurugold: #dec43e;
+$gurualternate: #4a4d50;
 $linkColour: $blue;
 $linkHoverColour: lighten($blue, 20%);
 
 // User Interface colours
 $global-bg-colour: #fff;
-$navbar-colour: #4a4d50;
+$navbar-colour: $gurualternate;
 $navbar-link-colour: #fff;
+$footer-colour: $gurualternate;
 $primary-colour: $gurugreen;
 $secondary-colour: $gurugold;
 $default-colour: #f2f2f2;

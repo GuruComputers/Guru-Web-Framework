@@ -4,14 +4,14 @@
 @import "compass/reset";
 @import "bourbon/bourbon";
 
-
 // Authored Dependencies
+@import "includes/base";
+@import "includes/mixins";
+@import "includes/variables";
+@import "utils/media_queries";
 @import "elements/images";
 @import "elements/borders";
-@import "utils/media_queries";
-@import "includes/variables";
 @import "includes/colours";
-@import "includes/mixins";
 @import "includes/fonts";
 @import "includes/grid-calc";
 @import "utils/grid";
@@ -22,3 +22,4 @@
 @import "io/media";
 @import "io/search_form";
 @import "io/twitter_feed";
+@import "sections/footer";

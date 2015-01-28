@@ -1,0 +1,16 @@
+#content {
+	margin-bottom: -142px;
+}
+
+#content:after {
+	content: "";
+	display: block;
+}
+
+footer, #content:after {
+	height: 142px;
+}
+
+footer {
+	background: $footer-colour;
+}
