@@ -4,12 +4,18 @@
 
 // Mobile / Tablets First
 	nav {
-		margin-top: -170px;
-		text-align: right;
-		padding: 60px 0 0 0;
+        width: 100%;
+        min-height: 60px;
 		display: block;
+        margin-bottom: 20px;
 		position: relative;
         background: $navbar-colour;
+        @include respond(all-phones) {
+            border: none;
+            .column, .columns {
+                min-height: 0;
+            }
+        }
 
 		&.fixed {
 			position: fixed;
@@ -19,15 +25,30 @@
 		&.pinned {
 			position: absolute;
 		}
+        a.toggle {
+            display: none;
 
-		@include respond(all-phones) {
-			top: 160px;
-			right: 4%;
-			width: 300px;
-			position: absolute;
-			text-align: center;
-			display: inline-block;
-		}
+            // Nav for Mobiles
+            @include respond(all-phones) {
+                top: 18%;
+                right: 4%;
+                width: 46px;
+                position: absolute;
+                text-align: center;
+                display: inline-block;
+                color: $navbar-link-colour;
+                background: $navbar-colour;
+                @include line-and-height(40px);
+                @include border-radius($button-radius);
+                @include font-size($larger);
+                &:hover {
+                    background: lighten($navbar-colour, 5%);
+                }
+                &:active, &.active {
+                    background: darken($navbar-colour, 5%);
+                }
+            }
+        }
 	}
 
 	nav ul {
@@ -93,10 +114,25 @@
     	margin: 0 $marginWidth 0 0;
     	padding: 0;
         @include line-and-height(height-calc($larger - 3));
+        a {
+            display: block;
+            padding: 0;
+            overflow: hidden;
+            @include line-and-height(height-calc($larger - 3));
+            img {
+                max-height: 95%;
+            }
+        }
     	@include respond(all-phones) {
     		float: left;
-    		display: block;
-    		width: 400px;
-    		height: auto;
+    		display: inline;
+            a {
+                padding: 0;
+                img {
+                    width: auto;
+                    height: auto;
+                    max-width: 100%;
+                }
+            }
     	}
     }

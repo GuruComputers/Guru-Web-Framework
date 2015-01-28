@@ -20,8 +20,10 @@
 </head>
 <body>
 	<header>
-		<img src="img/logo.png" class="logo" alt="logo">
 		<nav>
+			<div class="logo">
+				<img src="img/logo.png" alt="logo">
+			</div>
 			<?php
 				$menuArray = array("About", "Server Status", "Free Hosting", "Premium Hosting", "Design Services", "Contact");
 				create_menu("list",true,$menuArray);
