@@ -19,6 +19,9 @@ $link-font-weight: $font-weight-regular;
 $button-font-weight: $font-weight-semibold;
 $tabs-font-weight: $font-weight-semibold;
 
+// Font Sizes
+
+
 // Typography Colours
 $header-font-colour: #444444 !default;
 $header-link-colour: #d04526 !default;
@@ -30,5 +33,13 @@ $body-link-hover-colour: #c03d20 !default;
 h1,h2,h3,h4,h5,h6 {
 	font-family: $font-family;
 	font-weight: $header-font-weight;
+	color: $header-font-colour;
+	text-rendering: optimizeLegibility;
+	a {
+		color: $header-link-color;
+	}
+}
 
+h1 {
+	@include font-size($xxxlarge)
 }
