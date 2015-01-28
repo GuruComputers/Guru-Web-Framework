@@ -1,8 +1,11 @@
 // Plugin Dependencies
 @import "modular-scale";
+@import "compass";
+@import "compass/reset";
+@import "bourbon/bourbon";
+
 
 // Authored Dependencies
-@import "includes/reset";
 @import "elements/borders";
 @import "utils/media_queries";
 @import "includes/variables";
