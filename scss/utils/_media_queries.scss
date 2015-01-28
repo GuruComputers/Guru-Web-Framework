@@ -5,27 +5,14 @@ $mobile-landscape: 481px;
 $laptop: 1025px;
 $large-screen: 1281px;
 
-// Media Query Mixin
-
-@mixin respond-to($media) {
-	@if $media == mobile-portrait {
-		@media only screen and (max-width: $mobile-portrait){
-			@content;
-		}
-	}
-	@else if $media == mobile-landscape {
-		@media only screen and (max-width: $mobile-landscape){
-			@content;
-		}
-	}
-	@else if $media == laptop {
-		@media only screen and (max-width: $laptop){
-			@content;
-		}
-	}
-	@else if $media == large-screen {
-		@media only screen and (min-width: $large-screen){
-			@content;
-		}
-	}
+@function breakpoint($breakpoint) {
+  @if $breakpoint == $document-width {
+    @return $document-width - 1;
+  }
+  @if $breakpoint == $tablet-device-width {
+  	@return $tablet-device-width - 1;
+  }
+  @if $breakpoint == $min-device-width {
+  	@return $min-device-width + 1;
+  }
 }
