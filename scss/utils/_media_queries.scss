@@ -1,9 +1,12 @@
 // Setup Screen Sizes
 
+$min-device-width: 420px;
 $mobile-portrait: 406px;
 $mobile-landscape: 481px;
+$tablet-device-width: 768px;
 $laptop: 1025px;
 $large-screen: 1281px;
+$max-device-width: 2880px;
 
 @function breakpoint($breakpoint) {
   @if $breakpoint == $document-width {
